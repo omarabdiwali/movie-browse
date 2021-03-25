@@ -12,7 +12,7 @@ export default class TrendingData extends React.Component {
       list: null,
       id: false,
       tv: false,
-      apiKey: "10b5693a4908c90364aeadfb16c550e9",
+      apiKey: "##################",
     }
 
     this.handleInput = this.handleInput.bind(this);
