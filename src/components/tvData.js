@@ -16,7 +16,7 @@ export default class TVData extends React.Component {
       number: Number(window.localStorage.getItem("page1")),
       list: null,
       id: false,
-      apiKey: "10b5693a4908c90364aeadfb16c550e9"
+      apiKey: "################"
     }
 
     this.nextPage = this.nextPage.bind(this);
