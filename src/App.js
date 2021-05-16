@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ButtonAppBar from './components/ButtonAppBar';
 import MovieData from './components/movieData';
 import TVData from './components/tvData';
@@ -8,11 +8,11 @@ import TrendingData from './components/trendingData';
 
 function App() {
   return (
-    <HashRouter basename='/'>
-      <div className="App">
-        <Button component={Link} to='/movie-screen/movies' style={{background: "grey"}}>Go To Movies</Button>
-      </div>
+    <Router>
       <Switch>
+        <Route exact path='/'>
+          <ButtonAppBar type={<MovieData />} kind={ "Movies" } />
+        </Route>
         <Route path='/movies'>
           <ButtonAppBar type={<MovieData />} kind={ "Movies" } />
         </Route>
@@ -23,7 +23,7 @@ function App() {
           <ButtonAppBar type={ <TrendingData /> } kind={ "Trending" } />
         </Route>
       </Switch>
-    </HashRouter>
+    </Router>
   );
 }
 export default App;
