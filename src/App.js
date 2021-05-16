@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ButtonAppBar from './components/ButtonAppBar';
 import MovieData from './components/movieData';
 import TVData from './components/tvData';
