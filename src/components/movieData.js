@@ -18,7 +18,8 @@ export default class MovieData extends React.Component {
       id: false,
       apiKey: "#################"
     }
-
+    
+    document.title = "Movie Screen - Movies";
     this.nextPage = this.nextPage.bind(this);
     this.prevPage = this.prevPage.bind(this);
     this.firstPage = this.firstPage.bind(this);
