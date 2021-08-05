@@ -14,7 +14,8 @@ export default class TrendingData extends React.Component {
       tv: false,
       apiKey: "##################",
     }
-
+    
+    document.title = "Movie Screen - Trending";
     this.handleInput = this.handleInput.bind(this);
     this.clickBack = this.clickBack.bind(this);
 
