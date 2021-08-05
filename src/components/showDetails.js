@@ -2,6 +2,8 @@ import React from 'react';
 import "./showDetails.css";
 
 export default function ShowDetails({data, type=null}) {
+  
+  document.title = "Movie Screen - Details";
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -47,7 +49,7 @@ export default function ShowDetails({data, type=null}) {
   return (
     <div style={{ color: "white" }}>
       <section style={{marginTop: "10px", display: "flex", flexDirection: "row"}}>
-        <img style={{ border: "white", autoResize: "auto 342 / 513" }} src={data.poster_path ? `http://image.tmdb.org/t/p/w342${data.poster_path}` : "https://media.comicbook.com/files/img/default-movie.png"} alt={data.title}></img>
+        <img style={{ border: "white", autoResize: "auto 342 / 513", maxHeight: "513px", maxWidth: "342px", paddingTop: "2.1rem" }} src={data.poster_path ? `http://image.tmdb.org/t/p/w342${data.poster_path}` : "https://media.comicbook.com/files/img/default-movie.png"} alt={data.title}></img>
         <div style={{width: "50%", margin: "0 auto"}}>
           <h1 style={{ fontSize: "30px" }}>{type ? data.name : data.title}</h1>
           <div className={"details"}>
